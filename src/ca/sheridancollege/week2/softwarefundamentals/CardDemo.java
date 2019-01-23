@@ -12,6 +12,7 @@ package ca.sheridancollege.week2.softwarefundamentals;
 public class CardDemo {
     public static void main (String args[]){
         Card c1 = new Card ("Hearts", 10);
+        
         System.out.println("The card created is: " + c1.getValue() + 
                                 " of " + c1.getSuit());
     }

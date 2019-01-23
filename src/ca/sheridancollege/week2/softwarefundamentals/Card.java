@@ -10,17 +10,29 @@ package ca.sheridancollege.week2.softwarefundamentals;
  * @author Ali Hassan
  */
 public class Card {
+
     private String suit;
     private int value;
-    
-    public Card (String s, int v){
+
+    public Card(String s, int v) {
         suit = s;
         value = v;
+        if (s.equals("Hearts")
+                || s.equals("Spades")
+                || s.equals("Diamonds")
+                || s.equals("Clubs")) {
+            System.out.println("the suit in valid");
+        } else 
+            System.out.println("the suit in invalid. Please enter a valid suit ");
+        
+        if (v > 0 && v < 14) {
+            System.out.println("the card value is valid");
+        } else 
+            System.out.println("the value of the card should be from 1-13");
     }
-
-    /**
-     * @return the suit
-     */
+        /**
+         * @return the suit
+         */
     public String getSuit() {
         return suit;
     }
@@ -45,5 +57,5 @@ public class Card {
     public void setValue(int value) {
         this.value = value;
     }
-    
+
 }
